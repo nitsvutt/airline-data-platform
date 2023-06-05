@@ -6,9 +6,9 @@
             "connection.url": "jdbc:mysql://mysql:3306/flight_delay",
             "connection.user": "kafka",
             "connection.password": "password",
-            "query":"select * from flight_delay.flight_records",
-            "mode":"timestamp",
-            "timestamp.column.name":"EntryDate",
+            "query":"select * from flight_delay.test",
+            "mode":"incrementing",
+            "incrementing.column.name":"id",
             "poll.interval.ms":"5000",
             "batch.max.rows": "5",
             "topic.prefix":"mysql"

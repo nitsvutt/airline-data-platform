@@ -8,4 +8,5 @@ docker run --name mysql -d \
     -v /Users/trantrieuvu/Desktop/mysql:/var/lib/mysql \
     mysql:latest
 
-# grant all privileges on flight_delay.flight_records to 'kafka';
+# grant all privileges on flight_delay.* to 'kafka';
+# /bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic mysql --from-beginning

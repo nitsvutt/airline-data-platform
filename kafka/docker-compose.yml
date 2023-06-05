@@ -1,6 +1,33 @@
 ---
 version: '2'
 services:
+  mongodb:
+    image: mongo:latest
+    hostname: mongodb
+    container_name: mongodb
+    ports:
+      - '27017:27017'
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+    volumes:
+      - /Users/trantrieuvu/Desktop/mongodb:/data/db
+    restart: always
+  
+  mysql:
+    image: mysql:latest
+    hostname: mysql
+    container_name: mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_USER=kafka
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=admin
+    volumes:
+      - /Users/trantrieuvu/Desktop/mysql:/var/lib/mysql
+    restart: always
+
   zookeeper:
     image: confluentinc/cp-zookeeper:7.3.0
     platform: linux/arm64
@@ -11,6 +38,7 @@ services:
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
+    restart: always
 
   broker:
     image: confluentinc/cp-server:7.3.0
@@ -41,6 +69,7 @@ services:
       CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
       CONFLUENT_METRICS_ENABLE: 'true'
       CONFLUENT_SUPPORT_CUSTOMER_ID: 'anonymous'
+    restart: always
 
   schema-registry:
     image: confluentinc/cp-schema-registry:7.3.0
@@ -86,14 +115,7 @@ services:
       CONNECT_CONSUMER_INTERCEPTOR_CLASSES: "io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor"
       CONNECT_PLUGIN_PATH: "/usr/share/java,/usr/share/confluent-hub-components"
       CONNECT_LOG4J_LOGGERS: org.apache.zookeeper=ERROR,org.I0Itec.zkclient=ERROR,org.reflections=ERROR
-    command:
-      - /bin/bash
-      - -c
-      - |
-        (echo 1; sleep 20; echo y; sleep 20; echo y; sleep 20; echo y) | /bin/confluent-hub install confluentinc/kafka-connect-jdbc:10.7.1
-        cd /usr/share/confluent-hub-components/confluentinc-kafka-connect-jdbc/
-        curl -O https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.30/mysql-connector-java-8.0.30.jar
-        ~/../../etc/confluent/docker/run
+    restart: always
 
   control-center:
     image: confluentinc/cp-enterprise-control-center:7.3.0
@@ -142,6 +164,7 @@ services:
       KSQL_KSQL_LOGGING_PROCESSING_TOPIC_REPLICATION_FACTOR: 1
       KSQL_KSQL_LOGGING_PROCESSING_TOPIC_AUTO_CREATE: 'true'
       KSQL_KSQL_LOGGING_PROCESSING_STREAM_AUTO_CREATE: 'true'
+    restart: always
 
   ksqldb-cli:
     image: confluentinc/cp-ksqldb-cli:7.3.0

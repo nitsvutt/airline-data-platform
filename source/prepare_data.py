@@ -1,6 +1,8 @@
 # import libraries
 import pandas as pd
 import glob
+import datetime
+import numpy as np
 
 # prepare data for databases
 print("Preparing data for databases...")
@@ -32,6 +34,10 @@ for file in files:
        'ActualElapsedTime', 'AirTime', 'Flights', 'Distance', 'DistanceGroup',
        'CarrierDelay', 'WeatherDelay', 'NASDelay', 'SecurityDelay',
        'LateAircraftDelay']
+    
+    # add timestamp column to dataframe
+    df['EntryDate'] = df['Year'].apply(lambda x: datetime.datetime.now()) # better to create real data
+    # df['EntryDate'] = np.where(True, datetime.datetime.now(), 0) # better to raise performance
     
     # create index for mongodb and mysql
     idx_mongodb = []
@@ -86,6 +92,10 @@ for file in files:
        'ActualElapsedTime', 'AirTime', 'Flights', 'Distance', 'DistanceGroup',
        'CarrierDelay', 'WeatherDelay', 'NASDelay', 'SecurityDelay',
        'LateAircraftDelay']
+    
+    # add timestamp column to dataframe
+    df['EntryDate'] = df['Year'].apply(lambda x: datetime.datetime.now()) # better to create real data
+    # df['EntryDate'] = np.where(True, datetime.datetime.now(), 0) # better to raise performance
     
     # create index for mongodb and mysql
     idx_mongodb = []

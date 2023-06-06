@@ -1,0 +1,12 @@
+{
+    "name": "mysql-sink",
+    "config":{
+            "connector.class":"io.confluent.connect.jdbc.JdbcSinkConnector",
+            "tasks.max":"1",
+            "connection.url":"jdbc:mysql://mysql:3306/flight_delay",
+            "connection.user":"kafka",
+            "connection.password":"password",
+            "table.name.format": "test2",
+            "topics":"test"
+        }
+}

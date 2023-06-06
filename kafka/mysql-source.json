@@ -1,0 +1,16 @@
+{
+    "name": "mysql-source",
+    "config":{
+            "connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector",
+            "tasks.max":"1",
+            "connection.url":"jdbc:mysql://mysql:3306/flight_delay",
+            "connection.user":"kafka",
+            "connection.password":"password",
+            "query":"select * from flight_delay.test",
+            "mode":"timestamp",
+            "timestamp.column.name":"EntryDate",
+            "poll.interval.ms":"5000",
+            "batch.max.rows":"5",
+            "topic.prefix":"test"
+        }
+}

@@ -7,5 +7,3 @@ docker run --name mysql -d \
     -e MYSQL_ROOT_PASSWORD=admin \
     -v /Users/trantrieuvu/Desktop/mysql:/var/lib/mysql \
     mysql:latest
-
-# grant all privileges on flight_delay.* to 'kafka';

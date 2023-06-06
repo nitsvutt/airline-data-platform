@@ -6,7 +6,7 @@
             "connection.url":"jdbc:mysql://mysql:3306/flight_delay",
             "connection.user":"kafka",
             "connection.password":"password",
-            "table.name.format": "test2",
+            "table.name.format": "sink",
             "topics":"test"
         }
 }

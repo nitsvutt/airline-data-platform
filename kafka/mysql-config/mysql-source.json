@@ -1,12 +1,12 @@
 {
-    "name": "mysql-source",
+    "name": "mysql-source2",
     "config":{
             "connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector",
             "tasks.max":"1",
             "connection.url":"jdbc:mysql://mysql:3306/flight_delay",
             "connection.user":"kafka",
             "connection.password":"password",
-            "query":"select * from flight_delay.test",
+            "query":"select * from flight_delay.source",
             "mode":"timestamp",
             "timestamp.column.name":"EntryDate",
             "poll.interval.ms":"5000",

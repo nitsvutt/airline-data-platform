@@ -3,13 +3,22 @@
     "config":{
             "connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector",
             "tasks.max":"1",
+
+            "key.converter":"io.confluent.connect.avro.AvroConverter",
+            "value.converter":"io.confluent.connect.avro.AvroConverter",
+            "key.converter.schema.registry.url":"http://schema-registry:8081",
+            "value.converter.schema.registry.url":"http://schema-registry:8081",
+
             "connection.url":"jdbc:mysql://mysql:3306/flight_delay",
             "connection.user":"kafka",
             "connection.password":"password",
+
             "query":"select * from flight_delay.source",
             "mode":"timestamp",
             "timestamp.column.name":"EntryDate",
+
             "batch.max.rows":"5000",
+            
             "topic.prefix":"test"
         }
 }

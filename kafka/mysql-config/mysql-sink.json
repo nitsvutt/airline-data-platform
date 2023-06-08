@@ -3,14 +3,23 @@
     "config":{
             "connector.class":"io.confluent.connect.jdbc.JdbcSinkConnector",
             "tasks.max":"1",
+
+            "key.converter":"io.confluent.connect.avro.AvroConverter",
+            "value.converter":"io.confluent.connect.avro.AvroConverter",
+            "key.converter.schema.registry.url":"http://schema-registry:8081",
+            "value.converter.schema.registry.url":"http://schema-registry:8081",
+
             "connection.url":"jdbc:mysql://mysql:3306/flight_delay",
             "connection.user":"kafka",
             "connection.password":"password",
-            "batch.size":"5000",
+            "table.name.format": "sink",
+
             "insert.mode":"upsert",
             "pk.mode":"record_value",
             "pk.fields": "EntryDate",
-            "table.name.format": "sink",
+
+            "batch.size":"5000",
+
             "topics":"test"
         }
 }

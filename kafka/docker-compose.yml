@@ -113,6 +113,14 @@ services:
       CONNECT_PLUGIN_PATH: "/usr/share/java,/usr/share/confluent-hub-components"
       CONNECT_LOG4J_LOGGERS: org.apache.zookeeper=ERROR,org.I0Itec.zkclient=ERROR,org.reflections=ERROR
     restart: always
+    command:
+      - bash
+      - -c
+      - |
+        /bin/confluent-hub install --no-prompt confluentinc/kafka-connect-jdbc:10.7.1
+        cd /usr/share/confluent-hub-components/confluentinc-kafka-connect-jdbc/
+        curl -O https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.30/mysql-connector-java-8.0.30.jar
+        ~/../../etc/confluent/docker/run
 
   control-center:
     image: confluentinc/cp-enterprise-control-center:7.3.0

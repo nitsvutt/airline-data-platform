@@ -1,5 +1,5 @@
 {
-    "name": "mysql-source2",
+    "name": "mysql-source",
     "config":{
             "connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector",
             "tasks.max":"1",

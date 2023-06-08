@@ -9,8 +9,7 @@
             "query":"select * from flight_delay.source",
             "mode":"timestamp",
             "timestamp.column.name":"EntryDate",
-            "poll.interval.ms":"5000",
-            "batch.max.rows":"5",
+            "batch.max.rows":"5000",
             "topic.prefix":"test"
         }
 }

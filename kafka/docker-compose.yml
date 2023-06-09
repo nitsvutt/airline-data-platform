@@ -1,32 +1,15 @@
 ---
 version: '2'
-services:
-  # mongodb:
-  #   image: mongo:latest
-  #   hostname: mongodb
-  #   container_name: mongodb
-  #   ports:
-  #     - '27017:27017'
-  #   environment:
-  #     - MONGO_INITDB_ROOT_USERNAME=root
-  #     - MONGO_INITDB_ROOT_PASSWORD=admin
-  #   volumes:
-  #     - /Users/trantrieuvu/Desktop/mongodb:/data/db
-  #   restart: always
-  
+
+networks:
+  kafka:
+    external: true
   mysql:
-    image: mysql:latest
-    hostname: mysql
-    container_name: mysql
-    ports:
-      - 3306:3306
-    environment:
-      - MYSQL_USER=kafka
-      - MYSQL_PASSWORD=password
-      - MYSQL_ROOT_PASSWORD=admin
-    volumes:
-      - /Users/trantrieuvu/Desktop/mysql:/var/lib/mysql
-    restart: always
+    external: true
+  mongodb:
+    external: true
+
+services:
 
   zookeeper:
     image: confluentinc/cp-zookeeper:7.3.0
@@ -35,6 +18,8 @@ services:
     container_name: zookeeper
     ports:
       - "2181:2181"
+    networks:
+      - kafka
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
@@ -49,6 +34,8 @@ services:
       - zookeeper
     ports:
       - "9092:9092"
+    networks:
+      - kafka
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
@@ -77,6 +64,8 @@ services:
       - broker
     ports:
       - "8081:8081"
+    networks:
+      - kafka
     environment:
       SCHEMA_REGISTRY_HOST_NAME: schema-registry
       SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: 'broker:29092'
@@ -92,6 +81,10 @@ services:
       - schema-registry
     ports:
       - "8083:8083"
+    networks:
+      - kafka
+      - mysql
+      - mongodb
     environment:
       CONNECT_BOOTSTRAP_SERVERS: 'broker:29092'
       CONNECT_REST_ADVERTISED_HOST_NAME: connect
@@ -135,6 +128,8 @@ services:
       - ksqldb-server
     ports:
       - "9021:9021"
+    networks:
+      - kafka
     environment:
       CONTROL_CENTER_BOOTSTRAP_SERVERS: 'broker:29092'
       CONTROL_CENTER_CONNECT_CONNECT-DEFAULT_CLUSTER: 'connect:8083'
@@ -157,6 +152,8 @@ services:
       - connect
     ports:
       - "8088:8088"
+    networks:
+      - kafka
     environment:
       KSQL_CONFIG_DIR: "/etc/ksql"
       KSQL_BOOTSTRAP_SERVERS: "broker:29092"

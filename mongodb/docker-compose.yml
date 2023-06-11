@@ -13,10 +13,14 @@ services:
       - 27017:27017
     networks:
       - mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=admin
     volumes:
       - /Users/trantrieuvu/Desktop/mongodb1:/data/db
+      - /Users/trantrieuvu/Desktop/mongodb-keyfile:/keyfile
     restart: always
-    command: mongod --replSet rs0
+    command: mongod --replSet rs0 --bind_ip_all --auth --keyFile /keyfile/security.keyFile
 
   mongo-2:
     image: mongo:latest
@@ -26,10 +30,14 @@ services:
       - 27018:27017
     networks:
       - mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=admin
     volumes:
       - /Users/trantrieuvu/Desktop/mongodb2:/data/db
+      - /Users/trantrieuvu/Desktop/mongodb-keyfile:/keyfile
     restart: always
-    command: mongod --replSet rs0
+    command: mongod --replSet rs0 --bind_ip_all --auth --keyFile /keyfile/security.keyFile
 
   mongo-3:
     image: mongo:latest
@@ -39,7 +47,11 @@ services:
       - 27019:27017
     networks:
       - mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=admin
     volumes:
       - /Users/trantrieuvu/Desktop/mongodb3:/data/db
+      - /Users/trantrieuvu/Desktop/mongodb-keyfile:/keyfile
     restart: always
-    command: mongod --replSet rs0
+    command: mongod --replSet rs0 --bind_ip_all --auth --keyFile /keyfile/security.keyFile

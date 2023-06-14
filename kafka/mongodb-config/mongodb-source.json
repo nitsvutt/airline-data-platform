@@ -9,7 +9,7 @@
         "key.converter.schema.registry.url":"http://schema-registry:8081",
         "value.converter.schema.registry.url":"http://schema-registry:8081",
 
-        "connection.uri": "mongodb://mongo-1:27017/",
+        "connection.uri": "mongodb://root:admin@mongo-1:27017/",
         "database": "flight_delay",
         "collection": "test",
 

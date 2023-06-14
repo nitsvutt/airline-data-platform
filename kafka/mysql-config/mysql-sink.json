@@ -20,6 +20,6 @@
 
             "batch.size":"5000",
 
-            "topics":"test"
+            "topics":"mysql"
         }
 }

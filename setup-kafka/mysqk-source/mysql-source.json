@@ -19,6 +19,6 @@
 
             "batch.max.rows":"5000",
             
-            "topic.prefix":"mysql"
+            "topic.prefix":"test"
         }
 }

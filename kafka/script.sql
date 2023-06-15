@@ -13,4 +13,6 @@ create table sink like source;
 
 ---MONGODB
 --create a test table
-db.source.insertMany(db.flight_records.find().limit(100000).toArray());
+db.source.insertMany(db.flight_records.find().limit(1000000).toArray());
+
+db.flight_records.find().limit(1000000).forEach(function(docs){db.source.insert(docs);})

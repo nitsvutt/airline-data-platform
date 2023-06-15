@@ -3,10 +3,13 @@
 grant all privileges on flight_delay.* to 'kafka';
 
 -- change datatype of 'EntryDate' column to datetime
-alter table flight records modify EntryDate datetime;
+alter table flight_records modify EntryDate datetime;
 
--- create a test table
+-- create a source table
 create table source as select * from flight_records limit 1000000;
+
+-- create a sink table
+create table sink like source;
 
 ---MONGODB
 --create a test table

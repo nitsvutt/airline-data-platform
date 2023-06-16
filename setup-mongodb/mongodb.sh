@@ -11,6 +11,8 @@ docker run --name mongodb -d \
     -e MONGO_INITDB_ROOT_USERNAME=root \
     -e MONGO_INITDB_ROOT_PASSWORD=admin \
     -v /Users/trantrieuvu/Desktop/mongodb1:/data/db \
+    --network mongodb \
+    --restart always\
     mongo:latest
 
 docker exec -it mongo-1 mongosh -u root -p admin | cat init.sh

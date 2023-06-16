@@ -9,6 +9,7 @@ docker run --name mysql -d \
     -e MYSQL_ROOT_PASSWORD=admin \
     -v /Users/trantrieuvu/Desktop/mysql:/var/lib/mysql \
     --network mysql \
+    --restart always\
     mysql:latest
 
 docker exec -it mysql mysql -u root -p

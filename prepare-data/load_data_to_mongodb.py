@@ -1,3 +1,5 @@
+# pip install pymongo
+
 # import libraries
 import pandas as pd
 import glob

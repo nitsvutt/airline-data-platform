@@ -2,19 +2,14 @@
 -- grant privileges for the user
 grant all privileges on flight_delay.* to 'kafka';
 
--- change datatype of 'EntryDate' column to datetime
-alter table flight_records modify EntryDate datetime;
+-- create an auto incremental id
+alter table flight_records add id int primary key auto_increment;
 
 -- create a source table
 create table source as select * from flight_records limit 1000000;
 
--- create a sink table
-create table sink like source;
-
 ---MONGODB
---create a test table
-db.source.insertMany(db.flight_records.find().limit(1000000).toArray());
-
+--create a source table
 db.flight_records.find().limit(1000000).forEach(function(docs){db.source.insert(docs);})
 
 ---CASSANDRA

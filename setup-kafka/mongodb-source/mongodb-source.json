@@ -13,7 +13,7 @@
         "database": "flight_delay",
         "collection": "source",
 
-        "poll.max.batch.size": "5000",
+        "poll.max.batch.size": "1000",
         "topic.prefix": "mongodb"
     }
 }

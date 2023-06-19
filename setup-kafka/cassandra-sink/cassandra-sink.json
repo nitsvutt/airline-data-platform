@@ -11,11 +11,14 @@
 
         "transforms": "ValueToKey",
         "transforms.ValueToKey.type": "org.apache.kafka.connect.transforms.ValueToKey",
-        "transforms.ValueToKey.fields": "EntryDate, Tail_Number",
+        "transforms.ValueToKey.fields": "id",
 
         "cassandra.local.datacenter":"datacenter1",
         "cassandra.contact.points": "cassandra",
         "cassandra.keyspace" : "flight_delay",
+        "cassandra.keyspace.replication.factor": "1",
+
+        "cassandra.write.mode":"upsert",
 
         "topics" : "mysql"
     }

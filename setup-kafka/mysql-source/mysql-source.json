@@ -14,10 +14,10 @@
             "connection.password":"password",
 
             "query":"select * from flight_delay.source",
-            "mode":"timestamp",
-            "timestamp.column.name":"EntryDate",
+            "mode":"incrementing",
+            "incrementing.column.name":"id",
 
-            "batch.max.rows":"5000",
+            "batch.max.rows":"1000",
             
             "topic.prefix":"mysql"
         }

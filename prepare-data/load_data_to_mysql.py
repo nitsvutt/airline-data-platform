@@ -1,3 +1,5 @@
+# pip install pymysql
+
 # import libraries
 import pandas as pd
 import glob

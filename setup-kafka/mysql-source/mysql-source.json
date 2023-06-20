@@ -17,7 +17,7 @@
             "mode":"incrementing",
             "incrementing.column.name":"id",
 
-            "batch.max.rows":"1000",
+            "batch.max.rows":"5000",
             
             "topic.prefix":"mysql"
         }

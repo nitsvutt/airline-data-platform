@@ -4,12 +4,6 @@ version: '2'
 networks:
   kafka:
     external: true
-  mysql:
-    external: true
-  mongodb:
-    external: true
-  cassandra:
-    external: true
 
 services:
 
@@ -152,9 +146,6 @@ services:
       - "8083:8083"
     networks:
       - kafka
-      - mysql
-      - mongodb
-      - cassandra
     environment:
       CONNECT_BOOTSTRAP_SERVERS: PLAINTEXT://broker-1:29092,PLAINTEXT://broker-2:29092,PLAINTEXT://broker-3:29092
       CONNECT_REST_ADVERTISED_HOST_NAME: connect

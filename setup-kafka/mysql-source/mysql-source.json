@@ -9,11 +9,11 @@
             "key.converter.schema.registry.url":"http://schema-registry:8081",
             "value.converter.schema.registry.url":"http://schema-registry:8081",
 
-            "connection.url":"jdbc:mysql://mysql:3306/flight_delay",
-            "connection.user":"kafka",
-            "connection.password":"password",
+            "connection.url":"jdbc:mysql://localhost:3306/flight_delay",
+            "connection.user":"root",
+            "connection.password":"admin",
 
-            "query":"select * from flight_delay.source",
+            "query":"select * from flight_delay.flight_records",
             "mode":"incrementing",
             "incrementing.column.name":"id",
 

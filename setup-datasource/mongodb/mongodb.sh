@@ -38,7 +38,7 @@ db.createUser(
 }
 );
 
-# stop mongodb replicaset
+# stop replicaset
 mongosh --port 2737 --eval 'db.adminCommand("shutdown");'
 mongosh --port 2727 --eval 'db.adminCommand("shutdown");'
 mongosh --port 2717 --eval 'db.adminCommand("shutdown");'

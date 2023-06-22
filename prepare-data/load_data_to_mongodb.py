@@ -6,7 +6,7 @@ import glob
 import pymongo
 
 # set up client, db, collection for mongodb
-client = pymongo.MongoClient("mongodb://root:admin@localhost:27017/")
+client = pymongo.MongoClient("mongodb://root:admin@localhost:2717,localhost:2727,localhost:2737/?replicaSet=myReplicaSet")
 db = client['flight_delay']
 collection = db['flight_records']
 

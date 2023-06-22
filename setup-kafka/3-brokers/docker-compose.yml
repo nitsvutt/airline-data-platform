@@ -1,12 +1,7 @@
 ---
 version: '2'
 
-networks:
-  kafka:
-    external: true
-
 services:
-
   zookeeper:
     image: confluentinc/cp-zookeeper:7.3.0
     platform: linux/arm64
@@ -14,8 +9,6 @@ services:
     container_name: zookeeper
     ports:
       - "2181:2181"
-    networks:
-      - kafka
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
@@ -31,8 +24,6 @@ services:
     ports:
       - "29092:29092"
       - "9092:9092"
-    networks:
-      - kafka
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
@@ -62,8 +53,6 @@ services:
     ports:
       - "29093:29092"
       - "9093:9092"
-    networks:
-      - kafka
     environment:
       KAFKA_BROKER_ID: 2
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
@@ -93,8 +82,6 @@ services:
     ports:
       - "29094:29092"
       - "9094:9092"
-    networks:
-      - kafka
     environment:
       KAFKA_BROKER_ID: 3
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
@@ -125,8 +112,6 @@ services:
       - broker-3
     ports:
       - "8081:8081"
-    networks:
-      - kafka
     environment:
       SCHEMA_REGISTRY_HOST_NAME: schema-registry
       SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: PLAINTEXT://broker-1:29092,PLAINTEXT://broker-2:29092,PLAINTEXT://broker-3:29092
@@ -144,8 +129,8 @@ services:
       - schema-registry
     ports:
       - "8083:8083"
-    networks:
-      - kafka
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       CONNECT_BOOTSTRAP_SERVERS: PLAINTEXT://broker-1:29092,PLAINTEXT://broker-2:29092,PLAINTEXT://broker-3:29092
       CONNECT_REST_ADVERTISED_HOST_NAME: connect
@@ -191,8 +176,6 @@ services:
       - ksqldb-server
     ports:
       - "9021:9021"
-    networks:
-      - kafka
     environment:
       CONTROL_CENTER_BOOTSTRAP_SERVERS: PLAINTEXT://broker-1:29092,PLAINTEXT://broker-2:29092,PLAINTEXT://broker-3:29092
       CONTROL_CENTER_CONNECT_CONNECT-DEFAULT_CLUSTER: 'connect:8083'
@@ -217,8 +200,6 @@ services:
       - connect
     ports:
       - "8088:8088"
-    networks:
-      - kafka
     environment:
       KSQL_CONFIG_DIR: "/etc/ksql"
       KSQL_BOOTSTRAP_SERVERS: PLAINTEXT://broker-1:29092,PLAINTEXT://broker-2:29092,PLAINTEXT://broker-3:29092

@@ -14,12 +14,12 @@
         "transforms.ValueToKey.fields": "id",
 
         "cassandra.local.datacenter":"datacenter1",
-        "cassandra.contact.points": "cassandra",
+        "cassandra.contact.points": "host.docker.internal",
         "cassandra.keyspace" : "flight_delay",
         "cassandra.keyspace.replication.factor": "1",
 
         "cassandra.write.mode":"upsert",
 
-        "topics" : "mysql"
+        "topics" : "mysql, mongodb"
     }
   }

@@ -22,9 +22,12 @@ for file in mongodb_files:
     df = pd.read_csv(file)
     
     # convert dataframe to list of dictionaries
-    data = df.to_dict(orient='records')
+    documents = df.to_dict(orient='records')
     
     # load this list to mongodb collection
-    collection.insert_many(data)
+    collection.insert_many(documents)
     
     print("Phase " + str(i) + " is completed.")
+
+# close the database connections
+client.close()

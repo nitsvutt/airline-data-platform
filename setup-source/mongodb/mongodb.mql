@@ -1,0 +1,18 @@
+# init replicaset
+rs.initiate();
+rs.add("localhost:2727");
+rs.add("localhost:2737");
+
+# create the user administrator
+use admin;
+db.createUser(
+{
+    user: "root",
+    pwd: "admin",
+    roles: [ 
+    { role: "userAdminAnyDatabase", db: "admin" },
+    { role: "dbAdminAnyDatabase", db: "admin" },
+    { role: "readWriteAnyDatabase", db: "admin" } 
+    ]
+}
+);

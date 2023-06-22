@@ -9,11 +9,12 @@
         "key.converter.schema.registry.url":"http://schema-registry:8081",
         "value.converter.schema.registry.url":"http://schema-registry:8081",
 
-        "connection.uri": "mongodb://root:admin@host.docker.internal:2717,host.docker.internal:2727,host.docker.internal:2737/?replicaSet=myReplicaSet",
+        "connection.uri": "mongodb://root:admin@host.docker.internal:2717",
         "database": "flight_delay",
         "collection": "source",
 
         "poll.max.batch.size": "5000",
+
         "topic.prefix": "mongodb"
     }
 }

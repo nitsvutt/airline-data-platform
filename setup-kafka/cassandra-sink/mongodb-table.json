@@ -1,5 +1,5 @@
 {
-    "name" : "cassandra-sink",
+    "name" : "mongodb-table",
     "config" : {
         "connector.class" : "io.confluent.connect.cassandra.CassandraSinkConnector",
         "tasks.max" : "1",
@@ -17,9 +17,12 @@
         "cassandra.contact.points": "host.docker.internal",
         "cassandra.keyspace" : "flight_delay",
         "cassandra.keyspace.replication.factor": "1",
+        "cassandra.username": "root",
+        "cassandra.password": "admin",
+        "connect.cassandra.kcql": "insert into mongodb select id, data from mongodb",
 
         "cassandra.write.mode":"upsert",
 
-        "topics" : "mysql, mongodb"
+        "topics" : "mysql"
     }
   }

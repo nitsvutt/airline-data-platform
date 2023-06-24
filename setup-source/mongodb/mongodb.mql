@@ -1,4 +1,4 @@
-# init replicaset
+# initiate replicaset
 rs.initiate();
 rs.add("localhost:2727");
 rs.add("localhost:2737");

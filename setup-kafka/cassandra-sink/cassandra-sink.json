@@ -1,5 +1,5 @@
 {
-    "name" : "mongodb-table",
+    "name" : "cassandra-sink",
     "config" : {
         "connector.class" : "io.confluent.connect.cassandra.CassandraSinkConnector",
         "tasks.max" : "1",
@@ -11,7 +11,7 @@
 
         "transforms": "ValueToKey",
         "transforms.ValueToKey.type": "org.apache.kafka.connect.transforms.ValueToKey",
-        "transforms.ValueToKey.fields": "_id",
+        "transforms.ValueToKey.fields": "Id",
 
         "cassandra.local.datacenter":"datacenter1",
         "cassandra.contact.points": "host.docker.internal",
@@ -22,6 +22,6 @@
 
         "cassandra.write.mode":"upsert",
 
-        "topics" : "mongodb"
+        "topics" : "mongodb, mysql"
     }
   }

@@ -15,7 +15,7 @@
 
             "query":"select * from flight_delay.source",
             "mode":"incrementing",
-            "incrementing.column.name":"id",
+            "incrementing.column.name":"Id",
 
             "batch.max.rows":"5000",
             

@@ -11,6 +11,9 @@ print("Preparing data for databases...")
 files = glob.glob("../extracted_data/db/*.csv")
 files.sort()
 
+# initiate the step value for the first file
+id = 0
+
 for file in files:
     i = file.split("/")[3].split('.')[0]
     print("Phase " + str(i) + " is running...")
@@ -34,6 +37,10 @@ for file in files:
        'ActualElapsedTime', 'AirTime', 'Flights', 'Distance', 'DistanceGroup',
        'CarrierDelay', 'WeatherDelay', 'NASDelay', 'SecurityDelay',
        'LateAircraftDelay']
+    df['Id'] = df.index + id
+    
+    # reassign the step value for the next file
+    id = df['Id'].max() + 1
     
     # create index for mongodb and mysql
     idx_mongodb = []
@@ -88,6 +95,10 @@ for file in files:
        'ActualElapsedTime', 'AirTime', 'Flights', 'Distance', 'DistanceGroup',
        'CarrierDelay', 'WeatherDelay', 'NASDelay', 'SecurityDelay',
        'LateAircraftDelay']
+    df['Id'] = df.index + id
+    
+    # reassign the step value for the next file
+    id = df['Id'].max() + 1
     
     # create index for mongodb and mysql
     idx_mongodb = []

@@ -25,4 +25,3 @@ export PYSPARK_DRIVER_PYTHON=python
 
 # add package to connect to cassandra
 pyspark --packages com.datastax.spark:spark-cassandra-connector_2.12:3.3.0
-

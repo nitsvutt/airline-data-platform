@@ -16,11 +16,18 @@ pyenv local 3.10.4
 # install apache spark
 brew install apache-spark
 
-# export pyspark driver to jupyter in ~/.bash_profile
+# export pyspark driver to use python in ~/.bash_profile
 """
 export SPARK_HOME=/opt/homebrew/Cellar/apache-spark/3.4.1/libexec
 export PYSPARK_PYTHON=python
 export PYSPARK_DRIVER_PYTHON=python
+"""
+
+# export pyspark driver to use jupyter in ~/.zshrc
+"""
+export SPARK_HOME=/opt/homebrew/Cellar/apache-spark/3.4.1/libexec
+export PYSPARK_DRIVER_PYTHON=jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
 """
 
 # add package to connect to cassandra

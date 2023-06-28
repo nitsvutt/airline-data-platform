@@ -2,14 +2,14 @@
 create schema if not exists `flight_delay`;
 
 --create table dim_date
-create or replace table `flight_delay.dim-date`(
+create or replace table `flight_delay.dim_date`(
   id INT64 not null,
-  flight_delay DATE,
   year INT64,
   quarter INT64,
   month INT64,
   dayofmonth INT64,
-  dayofweek INT64
+  dayofweek INT64,
+  flight_date DATE
 );
 
 -- create table dim_airline

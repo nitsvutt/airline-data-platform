@@ -20,6 +20,4 @@ create or replace table `flight_delay.dim_airline`(
   iata_code_reporting_airline STRING,
   tail_number STRING,
   flight_number_reporting_airline INT64
-)
-
--- create table dim_
+);

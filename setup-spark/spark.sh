@@ -14,18 +14,22 @@ pyenv install 3.10.4
 pyenv local 3.10.4
 
 # install apache spark
-brew install apache-spark
+cd ~/Documents/Workspace/tools
+wget https://dlcdn.apache.org/spark/spark-3.3.2/spark-3.3.2-bin-hadoop3.tgz
+tar -xzf spark-3.3.2-bin-hadoop3.tgz
 
 # export pyspark driver to use python in ~/.bash_profile
 """
-export SPARK_HOME=/opt/homebrew/Cellar/apache-spark/3.4.1/libexec
+export SPARK_HOME=~/Documents/Workspace/tools/spark-3.3.2-bin-hadoop3
+export PATH=$PATH:$SPARK_HOME/bin
 export PYSPARK_PYTHON=python
 export PYSPARK_DRIVER_PYTHON=python
 """
 
 # export pyspark driver to use jupyter in ~/.zshrc
 """
-export SPARK_HOME=/opt/homebrew/Cellar/apache-spark/3.4.1/libexec
+export SPARK_HOME=~/Documents/Workspace/tools/spark-3.3.2-bin-hadoop3
+export PATH=$PATH:$SPARK_HOME/bin
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
 """

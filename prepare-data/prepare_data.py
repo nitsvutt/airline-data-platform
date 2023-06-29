@@ -7,7 +7,7 @@ import numpy as np
 # initiate the idex value for the first file
 id = 0
 
-# create function to prepare data for specific cases
+# create function to prepare data for specific cases ('db':database, 'streaming':streaming)
 def prepare_data_for(case):
     # get all files from extracted_data/case/
     files = glob.glob("../extracted_data/" + case + "/*.csv")

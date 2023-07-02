@@ -96,8 +96,6 @@ create or replace table `flight_delay.fact_records`(
   actual_elapsed_time INT64,
   air_time INT64,
   flights INT64,
-  distance INT64,
-  distance_group INT64,
   carrier_delay INT64,
   weather_delay INT64,
   nas_delay INT64,

@@ -19,6 +19,8 @@ This project is a data platform solution for my previous contribution with my pa
 
 In recent years, [The Bureau of Transportation Statistics (BTS)](https://www.bts.gov/) under [The United States Department of Transportation](https://www.transportation.gov/) has recorded a considerable decrease in the on-time performance of the majority of airlines. These airlines also experienced a moderable decline in the revenue so they really want to be offered an insightful flight delay report from BTS for analytical purposes. Assume that I work as a Data Engineer of BTS and my responsibility is to design a data platform to collect, process, store, build required dashboards and send it to their emails.
 
+Currently, my data platform architecture include an Ingestion layer, a Staging layer, a Processing & Integration layer, a Storage layer, and an Analysis & User Inteface layer connected by a Pipeline layer. The process begins with data ingested from separate sources by Ingestion layer and then stored into the Staging layer. After that, the Processing & Integration layer will extract data from the Staging layer, transform, integrate, and load it into the Storage layer. During this stage, the Pipeline layer will support the Processing & Integration layer devide tasks, implement, schedule and maintain the workflow. Finally, end users are able to interact with ready-to-use data in the Analysis & User Inteface layer.
+
 ## Methodology
 
 Explain the methodology or approach used to address the research problem or achieve the project goal. Include details about data collection, experimental setup, algorithms, or techniques employed.

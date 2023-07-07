@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This project is a data platform solution for my previous contribution with my partners at [COMNETSAT](https://comnetsat.org/) called [A Practical Real-time Flight Delay Prediction System using Big Data Technology](https://ieeexplore.ieee.org/document/9994427). In recent years, [The Bureau of Transportation Statistics (BTS)](https://www.bts.gov/) under [The United States Department of Transportation](https://www.transportation.gov/) has recorded a considerable decrease in the on-time performance of the majority of airlines. These airlines also experienced a moderable decline in the revenue so they really want to be offered an insightful flight delay report from BTS for analytical purposes. Assume that I work as a Data Engineer of BTS and my responsibility is to design a data platform to collect, process, store, build required dashboards and send it to their emails. The following architecture is a first look to the prolem so I just utilize very common technologies (most of them are open-source) to develope the platform including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Cloud Bigquery and Metabase.
+This project is a data platform solution for my previous contribution with my partners at [COMNETSAT](https://comnetsat.org/) called [A Practical Real-time Flight Delay Prediction System using Big Data Technology](https://ieeexplore.ieee.org/document/9994427). With a limited resources, the following architecture is a first look to the prolem so I just utilize very common technologies (most of them are open-source) to develop the platform including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Cloud Bigquery and Metabase. However, the platform still operate well with around 5,1 milions row (~2,1GB) of data comming at the same time.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -17,7 +17,7 @@ This project is a data platform solution for my previous contribution with my pa
 
 ## Introduction
 
-Introduce the research problem or project goal and provide relevant background information.
+In recent years, [The Bureau of Transportation Statistics (BTS)](https://www.bts.gov/) under [The United States Department of Transportation](https://www.transportation.gov/) has recorded a considerable decrease in the on-time performance of the majority of airlines. These airlines also experienced a moderable decline in the revenue so they really want to be offered an insightful flight delay report from BTS for analytical purposes. Assume that I work as a Data Engineer of BTS and my responsibility is to design a data platform to collect, process, store, build required dashboards and send it to their emails.
 
 ## Methodology
 

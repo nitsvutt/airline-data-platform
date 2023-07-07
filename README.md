@@ -1,19 +1,19 @@
-# Title
+# Airline Data Platform
 
 ## Abstract
 
-Provide a brief summary of the project, highlighting its objectives, methods, and key findings.
+This project is a data platform solution for my previous contribution with my partners at [COMNETSAT](https://comnetsat.org/) called [A Practical Real-time Flight Delay Prediction System using Big Data Technology](https://ieeexplore.ieee.org/document/9994427). Recently, the [Bureau of Transportation Statistics (BTS)](https://www.bts.gov/) under the [United States Department of Transportation](https://www.transportation.gov/) has recorded a considerable decrease in the on-time performance of the majority of airlines.
 
 ## Table of Contents
-- [1. Introduction](#introduction)
-- [2. Methodology](#methodology)
-- [3. Results](#results)
-- [4. Discussion](#discussion)
-- [5. Conclusion](#conclusion)
-- [6. References](#references)
-- [8. License](#license)
-- [9. Authors](#authors)
-- [10. Acknowledgments](#acknowledgments)
+- [Introduction](#introduction)
+- [Methodology](#methodology)
+- [Results](#results)
+- [Discussion](#discussion)
+- [Conclusion](#conclusion)
+- [References](#references)
+- [License](#license)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgments)
 
 ## Introduction
 

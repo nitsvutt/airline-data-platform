@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This project is a data platform solution for my previous contribution with my partners at [COMNETSAT](https://comnetsat.org/) called [A Practical Real-time Flight Delay Prediction System using Big Data Technology](https://ieeexplore.ieee.org/document/9994427). With a limited resources, the following architecture is a first look to the prolem so I just utilize very common technologies (most of them are open-source) to develop the platform including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Cloud Bigquery and Metabase. However, the platform still operate well with around 5,1 milions row (~2,1GB) of data comming at the same time.
+This project is a data platform solution for my previous contribution with my partners at [COMNETSAT](https://comnetsat.org/) called [A Practical Real-time Flight Delay Prediction System using Big Data Technology](https://ieeexplore.ieee.org/document/9994427). With a limited resources, the following architecture is a first look to the prolem so I just utilize very common technologies (most of them are open-source) to develop the platform including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Cloud Bigquery and Metabase. However, the platform still operate well with ~5,1M row (~2,1GB) of data comming at the same time.
 
 ## Table of Contents
 - [Introduction](#introduction)

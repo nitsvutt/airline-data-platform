@@ -1,3 +1,1 @@
-<video autoplay loop>
-  <source src="https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1" type="video/mp4">
-</video>
+[<img src="https://img.youtube.com/vi/PNkLthUdQus/hqdefault.jpg" width="600" height="300"/>](https://www.youtube.com/embed/PNkLthUdQus)

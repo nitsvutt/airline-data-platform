@@ -38,7 +38,7 @@ Specify the license under which the project is distributed, if applicable.
 
 | Id    | Name           | GitHub                      | LinkedIn                        | Gmail                |
 |-------|----------------|-----------------------------|---------------------------------|----------------------|
-| 1     | Trieu-Vu Tran  | [@nitsvutt](https://github.com/nitsvutt)       | [@nitsvutt](https://linkedin.com/in/nitsvutt)       | [@nitsvutt](nitsvutt@gmail.com) |
+| 1     | Trieu-Vu Tran  | [@nitsvutt](https://github.com/nitsvutt)       | [@nitsvutt](https://linkedin.com/in/nitsvutt)       | [@nitsvutt](mailto:nitsvutt@gmail.com) |
 
 
 <a href="https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus">

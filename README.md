@@ -22,7 +22,7 @@ Present the results of the project, including any analysis, visualizations, or s
   All airlines - Flight delay report
 </a>
 </br>
-<a href="https://www.youtube.com/embed/SlJLrqRsKXs?autoplay=1&loop=1&playlist=PNkLthUdQus">
+<a href="https://www.youtube.com/embed/SlJLrqRsKXs?autoplay=1&loop=1&playlist=SlJLrqRsKXs">
   9E airline - Flight delay report
 </a>
 

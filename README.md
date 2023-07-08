@@ -40,7 +40,7 @@ The project is my own contribution, but I am still grateful to my previous partn
 
 ## References
 
-List any references or sources used in the project, following a specific citation format (e.g., APA, IEEE, etc.).
+M. -T. Vo, T. -V. Tran, D. -T. Pham and T. -H. Do, "A Practical Real-Time Flight Delay Prediction System using Big Data Technology," 2022 IEEE International Conference on Communication, Networks and Satellite (COMNETSAT), Solo, Indonesia, 2022, pp. 160-167, doi: 10.1109/COMNETSAT56033.2022.9994427.
 
 ## License
 

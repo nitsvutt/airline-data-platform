@@ -1,9 +1,9 @@
 # Airline Data Platform
 
+![license](https://img.shields.io/github/license/nitsvutt/airline-data-platform)
 ![watchers](https://img.shields.io/github/watchers/nitsvutt/airline-data-platform)
 ![stars](https://img.shields.io/github/stars/nitsvutt/airline-data-platform)
 ![forks](https://img.shields.io/github/forks/nitsvutt/airline-data-platform)
-![license](https://img.shields.io/github/license/nitsvutt/airline-data-platform)
 
 ## Abstract
 

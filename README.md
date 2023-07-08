@@ -7,11 +7,11 @@
 
 ## Abstract
 
-This project is a data platform solution for my previous contribution with my partners at **COMNETSAT** called *A Practical Real-time Flight Delay Prediction System using Big Data Technology*<sup>[[1]](#references)</sup>. With a bounded resources and research purpose only, the following architecture is a first look to the prolem so I only utilize very common technologies (most of them are open-source) to develop the platform, including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Cloud Bigquery and Metabase. However, the platform still operate well with ~5,1M row (~2,1GB) of data comming at the same time.
+This project is a data platform solution for my previous contribution with my partners at **COMNETSAT** called *A Practical Real-time Flight Delay Prediction System using Big Data Technology*<sup>[[1]](#references)</sup>. With a bounded resources and research purpose only, the following architecture is a first look to the problem so I only utilize very common technologies (most of them are open-source) to develop the platform, including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Cloud Bigquery and Metabase. However, the platform still operate well with ~5,1M rows (~2,1GB) of data wrote at the same time.
 
 ## Introduction
 
-In recent years, **The Bureau of Transportation Statistics (BTS)** under **The United States Department of Transportation** has recorded a considerable decrease in the on-time performance of the majority of airlines. These airlines also experienced a moderable decline in the revenue so they really want to be offered an insightful flight delay report from **BTS** for analytical purposes. Assume that I work as a Data Engineer of **BTS** and my responsibility is to design a data platform to collect, process, store, build required dashboards and send it to their emails.
+In recent years, **The Bureau of Transportation Statistics (BTS)** under **The United States Department of Transportation** has recorded a considerable decrease in the on-time performance of the majority of airlines, thereby, these airlines also experienced a moderate fall in the revenue. Based on a thorough analysis, they have determined that customer services, including flight delay, significantly contribute to this decline. As a result, they really want to be offered an insightful flight delay report from **BTS** for analytical purpose. Assume that I work as a Data Engineer of **BTS** and my responsibility is to design a data platform to collect, process, store, and build required dashboards to embed to their apps or periodically send it to their emails.
 
 ## Dataset
 
@@ -35,7 +35,7 @@ On the one hand, the carriers can get very informative insights about the delay 
 
 ## Conclusion
 
-In conclusion, this project serves as an research endeavor in standalone mode. In order to deal with the practical problem, it is necessary to have additional resources to deploy a more powerful platform. And as I mentioned before, a Machine Learning model will be very useful to handle the recent status.
+In conclusion, this project serves as an research endeavor in standalone mode. In order to deal with the practical problem, it is necessary to have additional resources to deploy a more powerful platform. And as I mentioned before, a Machine Learning model will be highly benefical in handle the recent state.
 
 ## Acknowledgments
 

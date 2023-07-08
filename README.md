@@ -44,7 +44,7 @@ The project is my own contribution, but I am still grateful to my previous partn
 
 ## License
 
-<div style="max-height: 200px; overflow-y: scroll;">
+<div style="overflow-y: scroll;">
   <pre>
     
     MIT License

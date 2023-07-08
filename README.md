@@ -36,7 +36,7 @@ Summarize the main findings of the project and reiterate its importance. Discuss
 
 ## Acknowledgments
 
-The project is my own contribution, but I am still grateful to my previous partners, Minh-Tri Vo, Duc-The Pham, and lecturer, Trong-Hop Do for the original idea.
+The project is my own contribution, but I am still grateful to my previous partners, Minh-Tri Vo, Duc-The Pham, and lecturer, Trong-Hop Do for the original ideas.
 
 ## References
 

@@ -18,6 +18,14 @@ This dataset was extracted from the Reporting Carrier On-Time Performance (1987-
 
 Present the results of the project, including any analysis, visualizations, or statistical findings. Highlight key observations or trends.
 
+<a href="https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus">
+  All airlines - Flight delay report
+</a>
+</br>
+<a href="https://www.youtube.com/embed/SlJLrqRsKXs?autoplay=1&loop=1&playlist=PNkLthUdQus">
+  9E airline - Flight delay report
+</a>
+
 ## Discussion
 
 Discuss the implications of the results and their significance. Analyze the strengths and limitations of the approach and provide insights into potential future directions.
@@ -26,6 +34,10 @@ Discuss the implications of the results and their significance. Analyze the stre
 
 Summarize the main findings of the project and reiterate its importance. Discuss any potential applications or further research opportunities.
 
+## Acknowledgments
+
+The project is my own contribution, but I am still grateful to my previous partners, Minh-Tri Vo, Duc-The Pham, and lecturer, Trong-Hop Do for the original idea.
+
 ## References
 
 List any references or sources used in the project, following a specific citation format (e.g., APA, IEEE, etc.).
@@ -33,18 +45,3 @@ List any references or sources used in the project, following a specific citatio
 ## License
 
 Specify the license under which the project is distributed, if applicable.
-
-## Authors
-
-| Id    | Name           | GitHub                      | LinkedIn                        | Gmail                |
-|-------|----------------|-----------------------------|---------------------------------|----------------------|
-| 1     | Trieu-Vu Tran  | [@nitsvutt](https://github.com/nitsvutt)       | [@nitsvutt](https://linkedin.com/in/nitsvutt)       | [@nitsvutt](mailto:nitsvutt@gmail.com) |
-
-
-<a href="https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus">
-  All airlines - Flight delay report
-</a>
-</br>
-<a href="https://www.youtube.com/embed/SlJLrqRsKXs?autoplay=1&loop=1&playlist=PNkLthUdQus">
-  9E airline - Flight delay report
-</a>

@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This project is a data platform solution for my previous contribution with my partners at [COMNETSAT](https://comnetsat.org/) called [A Practical Real-time Flight Delay Prediction System using Big Data Technology](https://ieeexplore.ieee.org/document/9994427). With a limited resources, the following architecture is a first look to the prolem so I just utilize very common technologies (most of them are open-source) to develop the platform including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Cloud Bigquery and Metabase. However, the platform still operate well with ~5,1M row (~2,1GB) of data comming at the same time.
+This project is a data platform solution for my previous contribution with my partners at [COMNETSAT](https://comnetsat.org/) called [A Practical Real-time Flight Delay Prediction System using Big Data Technology](https://ieeexplore.ieee.org/document/9994427). With a bounded resource and research purpose only, the following architecture is a first look to the prolem so I only utilize very common technologies (most of them are open-source) to develop the platform including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Cloud Bigquery and Metabase. However, the platform still operate well with ~5,1M row (~2,1GB) of data comming at the same time.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -23,7 +23,7 @@ Currently, my data platform architecture include an Ingestion layer, a Staging l
 
 ## Dataset
 
-This dataset was extracted from the Reporting Carrier On-Time Performance (1987-present) table of the "On-Time" database collected by [The Bureau of Transportation Statistics (BTS)](https://www.bts.gov/). It contains 109 columns and more than 5M records per year. However, in this project, I just practice with 61 columns concentrating on flight delay of the year 2020. The metadata are available [here](https://github.com/nitsvutt/airline-data-platform/blob/main/extracted-data/metadata/metadata.html).
+This dataset was extracted from the Reporting Carrier On-Time Performance (1987-present) table of the "On-Time" database collected by [The Bureau of Transportation Statistics (BTS)](https://www.bts.gov/). It contains 109 columns and more than 5M records per year. With a limited resource (1 machine with 8-core CPU and 8GB RAM), I only practice with 61 columns concentrating on flight delay of the year 2020. The metadata are available [here](https://github.com/nitsvutt/airline-data-platform/blob/main/extracted-data/metadata/metadata.html).
 
 ## Results
 

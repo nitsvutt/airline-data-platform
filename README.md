@@ -1,5 +1,10 @@
 # Airline Data Platform
 
+![watchers](https://img.shields.io/github/watchers/nitsvutt/airline-data-platform)
+![stars](https://img.shields.io/github/stars/nitsvutt/airline-data-platform)
+![forks](https://img.shields.io/github/forks/nitsvutt/airline-data-platform)
+![license](https://img.shields.io/github/license/nitsvutt/airline-data-platform)
+
 ## Abstract
 
 This project is a data platform solution for my previous contribution with my partners at **COMNETSAT** called *A Practical Real-time Flight Delay Prediction System using Big Data Technology*<sup>[[1]](#references)</sup>. With a bounded resource and research purpose only, the following architecture is a first look to the prolem so I only utilize very common technologies (most of them are open-source) to develop the platform including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Cloud Bigquery and Metabase. However, the platform still operate well with ~5,1M row (~2,1GB) of data comming at the same time.

@@ -13,15 +13,13 @@ This project is a data platform solution for my previous contribution with my pa
 
 In recent years, **The Bureau of Transportation Statistics (BTS)** under **The United States Department of Transportation** has recorded a considerable decrease in the on-time performance of the majority of airlines. These airlines also experienced a moderable decline in the revenue so they really want to be offered an insightful flight delay report from **BTS** for analytical purposes. Assume that I work as a Data Engineer of **BTS** and my responsibility is to design a data platform to collect, process, store, build required dashboards and send it to their emails.
 
-Currently, my data platform architecture include an Ingestion layer, a Staging layer, a Processing & Integration layer, a Storage layer, a Pipeline layer and an Analysis & User Inteface layer. The process begins with data ingested from separate sources by Ingestion layer and then stored into the Staging layer. After that, the Processing & Integration layer will extract data from the Staging layer, transform, integrate, and load it into the Storage layer. During this stage, the Pipeline layer will support the Processing & Integration layer devide tasks, implement, schedule and maintain the workflow. Finally, end users are able to interact with ready-to-use data in the Analysis & User Inteface layer.
-
 ## Dataset
 
 This dataset was extracted from *The Reporting Carrier On-Time Performance (1987-present)* table of *The On-Time Database* collected by **BTS**. It contains 109 columns and more than 5M records per year. With a limited resource (1 machine with 8-core CPU and 8GB RAM), I only practice with 61 columns concentrating on flight delay of the year 2020. The metadata are available [here](https://github.com/nitsvutt/airline-data-platform/blob/main/extracted-data/metadata/metadata.html).
 
-## Results
+## Methodology
 
-Present the results of the project, including any analysis, visualizations, or statistical findings. Highlight key observations or trends.
+To cope with this problem, my data platform architecture include an Ingestion layer, a Staging layer, a Processing & Integration layer, a Storage layer, a Pipeline layer and an Analysis & User Inteface layer. The process begins with data ingested from separate sources by Ingestion layer and then stored into the Staging layer. After that, the Processing & Integration layer will extract data from the Staging layer, transform, integrate, and load it into the Storage layer. During this stage, the Pipeline layer will support the Processing & Integration layer devide tasks, implement, schedule and maintain the workflow. Finally, end users are able to interact with ready-to-use data in the Analysis & User Inteface layer.
 
 <a href="https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus">
   All airlines - Flight delay report
@@ -31,13 +29,17 @@ Present the results of the project, including any analysis, visualizations, or s
   9E airline - Flight delay report
 </a>
 
+## Results
+
+Present the results of the project, including any analysis, visualizations, or statistical findings. Highlight key observations or trends.
+
 ## Discussion
 
-Discuss the implications of the results and their significance. Analyze the strengths and limitations of the approach and provide insights into potential future directions.
+On the on hand, the carriers can get very insightful informations about the delay of their flights. On the other hand, they cannot deal with the problem immediately so they should have temporary solutions to serve their customer better. One of my suggestions is that they should build a Machine Learning model to predict the flight delays as soon as possible and then make a decisive action.
 
 ## Conclusion
 
-Summarize the main findings of the project and reiterate its importance. Discuss any potential applications or further research opportunities.
+In conclusion, this project is just a standalone mode research. In order to deal with the real problem, we have to have more resource to deploy a more powerful platform. And as I mentioned before, a Machine Learning model is very useful to handle the recent status.
 
 ## Acknowledgments
 

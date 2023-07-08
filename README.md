@@ -21,21 +21,15 @@ This dataset was extracted from *The Reporting Carrier On-Time Performance (1987
 
 To cope with this problem, my data platform architecture include an Ingestion layer, a Staging layer, a Processing & Integration layer, a Storage layer, a Pipeline layer and an Analysis & User Inteface layer. The process begins with data ingested from separate sources by Ingestion layer and then stored into the Staging layer. After that, the Processing & Integration layer will extract data from the Staging layer, transform, integrate, and load it into the Storage layer. During this stage, the Pipeline layer will support the Processing & Integration layer devide tasks, implement, schedule and maintain the workflow. Finally, end users are able to interact with ready-to-use data in the Analysis & User Inteface layer.
 
-<a href="https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus">
-  All airlines - Flight delay report
-</a>
-</br>
-<a href="https://www.youtube.com/embed/SlJLrqRsKXs?autoplay=1&loop=1&playlist=SlJLrqRsKXs">
-  9E airline - Flight delay report
-</a>
-
 ## Results
 
-Present the results of the project, including any analysis, visualizations, or statistical findings. Highlight key observations or trends.
+The platform is able to ingest, process and store more than 5M rows at the same time with an acceptable delay. Now, Data Analysts can start to analyze quality data, build reports and schedule to send them to the airlines. In this case, I also take responsible for this work, the 2 following dashboards are examples, one is all airlines report for the BTS manager and another is 9E airline report for the 9e airline:
+- [All airlines - Flight delay report](https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus)
+- [9E airline - Flight delay report](https://www.youtube.com/embed/SlJLrqRsKXs?autoplay=1&loop=1&playlist=SlJLrqRsKXs)
 
 ## Discussion
 
-On the on hand, the carriers can get very insightful informations about the delay of their flights. On the other hand, they cannot deal with the problem immediately so they should have temporary solutions to serve their customer better. One of my suggestions is that they should build a Machine Learning model to predict the flight delays as soon as possible and then make a decisive action.
+On the one hand, the carriers can get very insightful informations about the delay of their flights to start research and process. On the other hand, they cannot deal with the problem immediately so they should have temporary solutions to improve their services. One of my suggestions is that they should build a Machine Learning model to predict the flight delays as soon as possible and then make a decisive action.
 
 ## Conclusion
 

@@ -7,7 +7,7 @@
 
 ## Abstract
 
-This project is a data platform solution for my previous contribution with my partners at **COMNETSAT** called *A Practical Real-time Flight Delay Prediction System using Big Data Technology*<sup>[[1]](#references)</sup>. With a bounded resource and research purpose only, the following architecture is a first look to the prolem so I only utilize very common technologies (most of them are open-source) to develop the platform including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Cloud Bigquery and Metabase. However, the platform still operate well with ~5,1M row (~2,1GB) of data comming at the same time.
+This project is a data platform solution for my previous contribution with my partners at **COMNETSAT** called *A Practical Real-time Flight Delay Prediction System using Big Data Technology*<sup>[[1]](#references)</sup>. With a bounded resources and research purpose only, the following architecture is a first look to the prolem so I only utilize very common technologies (most of them are open-source) to develop the platform, including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Cloud Bigquery and Metabase. However, the platform still operate well with ~5,1M row (~2,1GB) of data comming at the same time.
 
 ## Introduction
 
@@ -19,7 +19,9 @@ This dataset was extracted from *The Reporting Carrier On-Time Performance (1987
 
 ## Methodology
 
-To cope with this problem, my data platform architecture include an Ingestion layer, a Staging layer, a Processing & Integration layer, a Storage layer, a Pipeline layer and an Analysis & User Inteface layer. The process begins with data ingested from separate sources by Ingestion layer and then stored into the Staging layer. After that, the Processing & Integration layer will extract data from the Staging layer, transform, integrate, and load it into the Storage layer. During this stage, the Pipeline layer will support the Processing & Integration layer devide tasks, implement, schedule and maintain the workflow. Finally, end users are able to interact with ready-to-use data in the Analysis & User Inteface layer.
+To cope with this problem, my data platform architecture include an Ingestion layer, a Staging layer, a Processing & Integration layer, a Storage layer, a Pipeline layer and an Analysis & User Inteface layer. The process begins with data ingested from separate sources by Ingestion layer and then stored into the Staging layer. After that, the Processing & Integration layer will extract data from the Staging layer, transform, integrate, and load it into the Storage layer. During this stage, the Pipeline layer will support the Processing & Integration layer devide tasks, implement, schedule and maintain the workflow. Finally, end users are able to interact with ready-to-use data in the Analysis & User Inteface layer. The following design illustrates the architecture:
+
+(inprogress)
 
 ## Results
 
@@ -29,15 +31,15 @@ The platform is able to ingest, process and store more than 5M rows at the same 
 
 ## Discussion
 
-On the one hand, the carriers can get very insightful informations about the delay of their flights to start research and process. On the other hand, they cannot deal with the problem immediately so they should have temporary solutions to improve their services. One of my suggestions is that they should build a Machine Learning model to predict the flight delays as soon as possible and then make a decisive action.
+On the one hand, the carriers can get very informative insights about the delay of their flights to initiate research and take necessary actions. On the other hand, they are unable to address the issue immediately, necessitating the implementation of temporary measures to improve their services. One recommendation I propose is that they should build a Machine Learning model to accurately forecast flight delays, enabling swift and informed decision-making.
 
 ## Conclusion
 
-In conclusion, this project is just a standalone mode research. In order to deal with the real problem, we have to have more resource to deploy a more powerful platform. And as I mentioned before, a Machine Learning model is very useful to handle the recent status.
+In conclusion, this project serves as an research endeavor in standalone mode. In order to deal with the practical problem, it is necessary to have additional resources to deploy a more powerful platform. And as I mentioned before, a Machine Learning model will be very useful to handle the recent status.
 
 ## Acknowledgments
 
-The project is my own contribution, but I am still grateful to my previous partners, **Minh-Tri Vo**, **Duc-The Pham**, and lecturer, **Trong-Hop Do** for the original ideas.
+Although the project is my own contribution, I am still grateful to my previous partners, **Minh-Tri Vo**, **Duc-The Pham**, and lecturer, **Trong-Hop Do** for the original ideas.
 
 ## References
 

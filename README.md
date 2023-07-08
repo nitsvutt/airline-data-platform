@@ -25,7 +25,7 @@ To cope with this problem, my data platform architecture include an Ingestion la
 
 ## Results
 
-The platform is able to ingest, process and store more than 5M rows at the same time with an acceptable delay. Now, Data Analysts can start to analyze quality data, build reports and schedule to send them to the airlines. In this case, I also take responsible for this work, the 2 following dashboards are examples, one is the All Airlines Report for the **BTS** manager and another is the 9E Airline Report for the 9e airline:
+The platform is able to ingest, process and store more than 5M rows at the same time with an acceptable delay. Now, Data Analysts can start to analyze quality data, build reports and schedule to send them to the airlines. In this case, I also take responsible for this work, the 2 following dashboards are examples, one is the All Airlines Report for the **BTS** manager and another is the 9E Airline Report for the 9E airline:
 - [All airlines - Flight delay report](https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus)
 - [9E airline - Flight delay report](https://www.youtube.com/embed/SlJLrqRsKXs?autoplay=1&loop=1&playlist=SlJLrqRsKXs)
 

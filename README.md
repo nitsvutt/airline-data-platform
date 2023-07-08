@@ -4,17 +4,6 @@
 
 This project is a data platform solution for my previous contribution with my partners at [COMNETSAT](https://comnetsat.org/) called [A Practical Real-time Flight Delay Prediction System using Big Data Technology](https://ieeexplore.ieee.org/document/9994427). With a bounded resource and research purpose only, the following architecture is a first look to the prolem so I only utilize very common technologies (most of them are open-source) to develop the platform including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Cloud Bigquery and Metabase. However, the platform still operate well with ~5,1M row (~2,1GB) of data comming at the same time.
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Dataset](#dataset)
-- [Results](#results)
-- [Discussion](#discussion)
-- [Conclusion](#conclusion)
-- [References](#references)
-- [License](#license)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgments)
-
 ## Introduction
 
 In recent years, [The Bureau of Transportation Statistics (BTS)](https://www.bts.gov/) under [The United States Department of Transportation](https://www.transportation.gov/) has recorded a considerable decrease in the on-time performance of the majority of airlines. These airlines also experienced a moderable decline in the revenue so they really want to be offered an insightful flight delay report from BTS for analytical purposes. Assume that I work as a Data Engineer of BTS and my responsibility is to design a data platform to collect, process, store, build required dashboards and send it to their emails.
@@ -47,11 +36,9 @@ Specify the license under which the project is distributed, if applicable.
 
 ## Authors
 
-List the names or usernames of the project contributors.
-
-## Acknowledgments
-
-Acknowledge any individuals, organizations, or resources that provided support, guidance, or inspiration for the project.
+| Id    | Name           | GitHub                      | LinkedIn                        | Gmail                |
+|-------|----------------|-----------------------------|---------------------------------|----------------------|
+| 1     | Trieu-Vu Tran  | [@nitsvutt](https://github.com/nitsvutt)       | [@nitsvutt](https://linkedin.com/in/nitsvutt)       | [@nitsvutt](nitsvutt@gmail.com) |
 
 
 <a href="https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus">

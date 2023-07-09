@@ -31,8 +31,12 @@ On the source side, I implement a relational database, MySQL, and a document-bas
 
 The platform is able to ingest with 10000 rows per second throughput (depend on the host machine's state), then process and store it with a permissible delay. Now, Data Analysts can start to analyze quality data, build reports and schedule to send them to the airlines. In this case, I also take responsible for this work, the 2 following dashboards are examples, one is the *All Airlines Report* for the **BTS** manager and another is the *9E Airline Report* for the **9E airline**:
 <ul>
-  <li>[All airlines - Flight delay report](https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus)</li>
-  <li>[9E airline - Flight delay report](https://www.youtube.com/embed/SlJLrqRsKXs?autoplay=1&loop=1&playlist=SlJLrqRsKXs)</li>
+  <li>
+    <a href="https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus">All airlines - Flight delay report</a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/embed/SlJLrqRsKXs?autoplay=1&loop=1&playlist=SlJLrqRsKXs">9E airline - Flight delay report</a>
+  </li>
 </ul>
 
 ## Discussion

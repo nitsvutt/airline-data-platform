@@ -7,7 +7,7 @@
 
 ## Abstract
 
-This project is a data platform solution for my previous contribution with my partners at **COMNETSAT** called *A Practical Real-time Flight Delay Prediction System using Big Data Technology*<sup>[[1]](#references)</sup>. With a bounded resources and research purpose only, the following architecture is a first look to the problem so I only utilize very common technologies (most of them are open-source) to develop the platform, including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Cloud Bigquery and Metabase. However, the platform still operate well with ~5,1M rows (~2,1GB) of data wrote at the same time.
+This project is a data platform solution for my previous contribution with my partners at **COMNETSAT** called *A Practical Real-time Flight Delay Prediction System using Big Data Technology*<sup>[[1]](#references)</sup>. With a bounded resources and research purpose only, the following architecture is a first look to the problem so I only utilize very common technologies (most of them are open-source) to develop the platform, including Apache Kafka, Apache Cassandra, Apache Spark, Google Cloud Bigquery and Metabase. However, the platform still operate well with ~5,1M rows (~2,1GB) of data wrote at the same time.
 
 ## Introduction
 
@@ -19,7 +19,7 @@ This dataset was extracted from *The Reporting Carrier On-Time Performance (1987
 
 ## Methodology
 
-To cope with this problem, my data platform architecture include an Ingestion layer, a Staging layer, a Processing & Integration layer, a Storage layer, a Pipeline layer and an Analysis & User Inteface layer. The process begins with data ingested from separate sources by Ingestion layer and then stored into the Staging layer. After that, the Processing & Integration layer will extract data from the Staging layer, transform, integrate, and load it into the Storage layer. During this stage, the Pipeline layer will support the Processing & Integration layer devide tasks, implement, schedule and maintain the workflow. Finally, end users are able to interact with ready-to-use data in the Analysis & User Inteface layer. The following design illustrates the architecture:
+To cope with this problem, my data platform architecture include an Ingestion layer, a Staging layer, a Processing & Integration layer, a Storage layer, and an Analysis & User Inteface layer. The process begins with data ingested from separate sources by Ingestion layer and then stored into the Staging layer. After that, the Processing & Integration layer will extract data from the Staging layer, transform, integrate, and load it into the Storage layer. Finally, end users are able to interact with ready-to-use data in the Analysis & User Inteface layer. The following design illustrates the architecture:
 
 (inprogress)
 

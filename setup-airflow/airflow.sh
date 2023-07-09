@@ -7,7 +7,7 @@ wget https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml
 mkdir ./dags ./plugins ./logs
 
 # create an .env file to assign the current user ID
-echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0\n_AIRFLOW_WWW_USER_USERNAME='root'\n_AIRFLOW_WWW_USER_PASSWORD='admin" > .env
+echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env
 
 # up airflow-init
 docker compose up airflow-init

@@ -7,7 +7,7 @@
 
 ## Abstract
 
-This project is a data platform solution for my previous contribution with my partners at **COMNETSAT** called *A Practical Real-time Flight Delay Prediction System using Big Data Technology*<sup>[[1]](#references)</sup>. With a bounded resources and research purpose only, the following architecture is a first look to the problem so I only utilize very common technologies (most of them are open-source) to develop the platform, including Apache Kafka, Apache Cassandra, Apache Spark, Google Bigquery and Metabase. However, the platform still operate well with ~5,1M rows (~2,1GB) of data wrote at the same time.
+This project is a data platform solution for my previous contribution with my partners at **COMNETSAT** called *A Practical Real-time Flight Delay Prediction System using Big Data Technology*<sup>[[1]](#references)</sup>. With a bounded resources and research purpose only, the following architecture is a first look to the problem so I only utilize very common technologies (most of them are open-source) to develop the platform, including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Bigquery and Metabase. However, the platform still operate well with ~5,1M rows (~2,1GB) of data wrote at the same time.
 
 ## Introduction
 
@@ -19,15 +19,17 @@ This dataset was extracted from *The Reporting Carrier On-Time Performance (1987
 
 ## Methodology
 
-To cope with this problem, my data platform architecture include an Ingestion layer, a Staging layer, a Processing & Integration layer, a Storage layer, and an Analysis & User Inteface layer. The process begins with data ingested from separate sources by Ingestion layer and then stored into the Staging layer. After that, the Processing & Integration layer will extract data from the Staging layer, transform, integrate, and load it into the Storage layer. Finally, end users are able to interact with ready-to-use data in the Analysis & User Inteface layer. The following design illustrates the architecture:
+To cope with this problem, my data platform architecture include an Ingestion layer, a Staging layer, a Processing layer, a Integration & Storage layer, and an Analysis & User Inteface layer. The process begins with data ingested from separate sources by Ingestion layer and then stored into the Staging layer. After that, the Processing & Integration layer will extract data from the Staging layer, transform, integrate, and load it into the Storage layer. Finally, end users are able to interact with ready-to-use data in the Analysis & User Inteface layer. The following design illustrates the paticular architecture:
 
 <p align="center">
   <img src="https://github.com/nitsvutt/airline-data-platform/blob/main/asset/architecture.png" width="75%" alt="architecture">
 </p>
 
+Firstly, I implement a MySQL source and MongoDB source to simulate more available sources which the platform can ingest from. Followed by the Ingestion layer, I choose Apache Kafka for streaming ingestion and Apache Spark for batch ingestion. Apache Spark can also be used as a pre-processing tool for Apache Kaka, however, it requires your Apache Kafka service must be very durable. In the permanent Staging layer (a more popular type is temporary type), or Data Lake, Apache Cassandra and Apache Hadoop are usually good choices due to their high write and read performance. (inprogress)
+
 ## Results
 
-The platform is able to ingest, process and store more than 5M rows at the same time with an acceptable delay. Now, Data Analysts can start to analyze quality data, build reports and schedule to send them to the airlines. In this case, I also take responsible for this work, the 2 following dashboards are examples, one is the All Airlines Report for the **BTS** manager and another is the 9E Airline Report for the 9E airline:
+The platform is able to ingest, process and store more than 5M rows at the same time with an acceptable delay. Now, Data Analysts can start to analyze quality data, build reports and schedule to send them to the airlines. In this case, I also take responsible for this work, the 2 following dashboards are examples, one is the *All Airlines Report* for the **BTS** manager and another is the *9E Airline Report* for the 9E airline:
 - [All airlines - Flight delay report](https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus)
 - [9E airline - Flight delay report](https://www.youtube.com/embed/SlJLrqRsKXs?autoplay=1&loop=1&playlist=SlJLrqRsKXs)
 

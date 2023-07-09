@@ -7,7 +7,7 @@
 
 ## Abstract
 
-This project is a data platform solution for my previous contribution with my partners at **COMNETSAT** called *A Practical Real-time Flight Delay Prediction System using Big Data Technology*<sup>[[1]](#references)</sup>. With a bounded resources and research purpose only, the following architecture is a first look to the problem so I only utilize very common technologies (most of them are open-source) to develop the platform, including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Bigquery and Metabase. However, the platform still operate well with ~5,1M rows (~2,1GB) of data wrote at the same time.
+This project is a data platform solution for my previous contribution with my partners at **COMNETSAT** called *A Practical Real-time Flight Delay Prediction System using Big Data Technology*<sup>[[1]](#references)</sup>. With a bounded resources and research purpose only, the following architecture is a first look to the problem so I only utilize very common technologies (most of them are open-source) to develop the platform, including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Bigquery and Metabase. However, the platform still operate well with approximately 10000 rows per second streaming ingestion throughput and an acceptable overal latency.
 
 ## Introduction
 
@@ -15,7 +15,7 @@ In recent years, **The Bureau of Transportation Statistics (BTS)** under **The U
 
 ## Dataset
 
-This dataset was extracted from *The Reporting Carrier On-Time Performance (1987-present)* table of *The On-Time Database* collected by **BTS**. It contains 109 columns and more than 5M records per year. With a limited resource (1 machine with 8-core CPU and 8GB RAM), I only practice with 61 columns concentrating on flight delay of the year 2020. The metadata are available [here](https://github.com/nitsvutt/airline-data-platform/blob/main/extracted-data/metadata/metadata.html).
+This dataset was extracted from *The Reporting Carrier On-Time Performance (1987-present)* table of *The On-Time Database* collected by **BTS**. It contains 109 columns and more than 5M records per year. With a limited resource (1 machine with an Apple Silicon chip 8-core CPU and 8GB RAM), I only practice with 61 columns concentrating on flight delay of the year 2020. The metadata are available [here](https://github.com/nitsvutt/airline-data-platform/blob/main/extracted-data/metadata/metadata.html).
 
 ## Methodology
 
@@ -25,11 +25,11 @@ To cope with this problem, my data platform architecture include an Ingestion la
   <img src="https://github.com/nitsvutt/airline-data-platform/blob/main/asset/architecture.png" width="75%" alt="architecture">
 </p>
 
-Firstly, I implement a MySQL source and MongoDB source to simulate more available sources which the platform can ingest from. Followed by the Ingestion layer, I choose Apache Kafka for streaming ingestion and Apache Spark for batch ingestion. Apache Spark can also be used as a pre-processing tool for Apache Kaka, however, it requires your Apache Kafka service must be very durable. In the permanent Staging layer (a more popular type is temporary type), or Data Lake, Apache Cassandra and Apache Hadoop are usually good choices due to their highly write and read performance. (in progress)
+Firstly, I implement a relational database, MySQL, and a document-based database, MongoDB, to simulate more available sources which the platform can ingest from. Followed by the Ingestion layer, I choose Apache Kafka for streaming ingestion and Apache Spark for batch ingestion. Apache Spark can also be used as a processing tool for Apache Kaka output, however, it requires your Apache Kafka service must be very durable. In the persistent Staging layer (which can also be temporary), or Data Lake, wide-column based database named Apache Cassandra is usually a good choice due to its highly write and read performance. At the subsequent layer, Processing layer, Apache Spark is one of the most efficient solution. Having been processed, data is then integrated into Google Bigquery, a high scalable columnar Data Warehouse. Finally, an easy-to implement and use BI tool called Metabase will help end-users can easily interact with the data.
 
 ## Results
 
-The platform is able to ingest, process and store more than 5M rows at the same time with an acceptable delay. Now, Data Analysts can start to analyze quality data, build reports and schedule to send them to the airlines. In this case, I also take responsible for this work, the 2 following dashboards are examples, one is the *All Airlines Report* for the **BTS** manager and another is the *9E Airline Report* for the 9E airline:
+The platform is able to ingest with 10000 rows per second throughput (depend on the host machine's state), then process and store it with a permissible delay. Now, Data Analysts can start to analyze quality data, build reports and schedule to send them to the airlines. In this case, I also take responsible for this work, the 2 following dashboards are examples, one is the *All Airlines Report* for the **BTS** manager and another is the *9E Airline Report* for the 9E airline:
 - [All airlines - Flight delay report](https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus)
 - [9E airline - Flight delay report](https://www.youtube.com/embed/SlJLrqRsKXs?autoplay=1&loop=1&playlist=SlJLrqRsKXs)
 

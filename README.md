@@ -25,7 +25,7 @@ To cope with this problem, my data platform architecture include an Ingestion la
   <img src="https://github.com/nitsvutt/airline-data-platform/blob/main/asset/architecture.png" width="75%" alt="architecture">
 </p>
 
-Firstly, I implement a MySQL source and MongoDB source to simulate more available sources which the platform can ingest from. Followed by the Ingestion layer, I choose Apache Kafka for streaming ingestion and Apache Spark for batch ingestion. Apache Spark can also be used as a pre-processing tool for Apache Kaka, however, it requires your Apache Kafka service must be very durable. In the permanent Staging layer (a more popular type is temporary type), or Data Lake, Apache Cassandra and Apache Hadoop are usually good choices due to their high write and read performance. (inprogress)
+Firstly, I implement a MySQL source and MongoDB source to simulate more available sources which the platform can ingest from. Followed by the Ingestion layer, I choose Apache Kafka for streaming ingestion and Apache Spark for batch ingestion. Apache Spark can also be used as a pre-processing tool for Apache Kaka, however, it requires your Apache Kafka service must be very durable. In the permanent Staging layer (a more popular type is temporary type), or Data Lake, Apache Cassandra and Apache Hadoop are usually good choices due to their highly write and read performance. (inprogress)
 
 ## Results
 

@@ -21,7 +21,9 @@ This dataset was extracted from *The Reporting Carrier On-Time Performance (1987
 
 To cope with this problem, my data platform architecture include an Ingestion layer, a Staging layer, a Processing & Integration layer, a Storage layer, and an Analysis & User Inteface layer. The process begins with data ingested from separate sources by Ingestion layer and then stored into the Staging layer. After that, the Processing & Integration layer will extract data from the Staging layer, transform, integrate, and load it into the Storage layer. Finally, end users are able to interact with ready-to-use data in the Analysis & User Inteface layer. The following design illustrates the architecture:
 
-<img src="https://github.com/nitsvutt/airline-data-platform/blob/main/asset/architecture.png" align="center" width="800" alt="architecture">
+<p align="center">
+  <img src="https://github.com/nitsvutt/airline-data-platform/blob/main/asset/architecture.png" width="75%" alt="architecture">
+</p>
 
 ## Results
 

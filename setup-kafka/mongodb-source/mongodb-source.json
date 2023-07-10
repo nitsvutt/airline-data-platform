@@ -17,8 +17,6 @@
         "database": "flight_delay",
         "collection": "source",
 
-        "startup.mode": "copy_existing",
-
         "poll.max.batch.size": "5000",
 
         "topic.namespace.map": "{'flight_delay.source':'mongodb'}"

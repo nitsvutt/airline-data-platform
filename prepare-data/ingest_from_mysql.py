@@ -27,19 +27,22 @@ max_id = spark.read \
 if max_id is None:
     max_id = -1
 
+# read new data to dataframe
+data = spark.read \
+    .format("jdbc") \
+    .option("driver","com.mysql.cj.jdbc.Driver") \
+    .option("url", "jdbc:mysql://localhost:3306/flight_delay") \
+    .option("dbtable", "flight_records") \
+    .option("user", "root") \
+    .option("password", "admin") \
+    .option("numPartitions", 4) \
+    .load().filter(col("id")>max_id)
+
 # read and write by quarter
 for i in range(2020,2022):
-    for j in range(4):
+    for j in range(1,5):
         # read data filter by quarter
-        df = spark.read \
-            .format("jdbc") \
-            .option("driver","com.mysql.cj.jdbc.Driver") \
-            .option("url", "jdbc:mysql://localhost:3306/flight_delay") \
-            .option("dbtable", "flight_records") \
-            .option("user", "root") \
-            .option("password", "admin") \
-            .option("numPartitions", 4) \
-            .load().filter((col("id")>max_id)&(col("year")==i)&(col("quarter")==j))
+        df = data.filter((col("year")==i)&(col("quarter")==j))
 
         # rename columns
         for column in df.columns:

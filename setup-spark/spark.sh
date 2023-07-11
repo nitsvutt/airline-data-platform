@@ -34,9 +34,11 @@ export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
 """
 
-# download bigquery connector
+# download mysql connector
 cd ~/Documents/Workspace/tools/spark-jars
+wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.30/mysql-connector-java-8.0.30.jar
+# download bigquery connector
 wget https://storage.googleapis.com/spark-lib/bigquery/spark-3.3-bigquery-0.31.1.jar
 
 # add package to connect to cassandra
-pyspark --packages com.datastax.spark:spark-cassandra-connector_2.12:3.3.0,com.google.cloud.spark:spark-bigquery-with-dependencies_2.12:0.31.1
+pyspark --packages mysql:mysql-connector-java:8.0.30,com.datastax.spark:spark-cassandra-connector_2.12:3.3.0,com.google.cloud.spark:spark-bigquery-with-dependencies_2.12:0.31.1

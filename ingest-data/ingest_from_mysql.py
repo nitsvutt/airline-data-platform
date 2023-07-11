@@ -18,15 +18,6 @@ spark = SparkSession \
         .config("spark.sql.debug.maxToStringFields", 1000) \
         .getOrCreate()
 
-# get the current max id in cassandra
-max_id = spark.read \
-        .format("org.apache.spark.sql.cassandra") \
-        .options(keyspace="flight_delay", table="mysql") \
-        .load().agg(max("id")).collect()[0][0]
-# ensure it will be a value
-if max_id is None:
-    max_id = -1
-
 # read new data to dataframe
 data = spark.read \
     .format("jdbc") \
@@ -36,7 +27,7 @@ data = spark.read \
     .option("user", "root") \
     .option("password", "admin") \
     .option("numPartitions", 4) \
-    .load().filter(col("id")>max_id)
+    .load()
 
 # read and write by quarter
 for i in range(2020,2022):

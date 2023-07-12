@@ -29,7 +29,7 @@ On the source side, I implement a relational database, MySQL, and a document-bas
 
 ## Results
 
-The platform is able to batch ingest 225.000 (rows/batch) with a permissible delay or stream ingest around 10.000 (rows/s), in fact, it depends on your data size intead of number of rows. Additionally, it offers Data Analysts a friendly interface to analyze quality data, build reports and schedule to send them to the airlines. In this case, I also take responsible for this work, the 2 following dashboards are examples, one is the *All Airlines Report* for the **BTS** manager and another is the *9E Airline Report* for the **9E airline**:
+The data platform is able to batch ingest 225.000 (rows/batch) with a permissible delay or stream ingest around 10.000 (rows/s), in fact, the throughput depends on your data size intead of number of rows. Additionally, the platform offers Data Analysts a friendly interface to analyze quality data, build reports and schedule to send them to the airlines. In this case, I also take responsible for this work, the 2 following dashboards are examples, one is the *All Airlines Report* for the **BTS** manager and another is the *9E Airline Report* for the **9E airline**:
 <ul>
   <li>
     <a href="https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus">All airlines - Flight delay report</a>

@@ -7,7 +7,7 @@
 
 ## Abstract
 
-This project is a data platform solution for my previous contribution with my partners at **COMNETSAT** called *A Practical Real-time Flight Delay Prediction System using Big Data Technology*<sup>[[1]](#references)</sup>. With a bounded resources and research purpose only, the following architecture is a first look to the problem so I only utilize very common technologies (most of them are open-source) to develop the platform, including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Bigquery and Metabase. However, the platform still operate well with about 350.000 (rows/batch) batch ingestion throughput or approximately 10.000 (rows/s) streaming ingestion throughput with an acceptable overall latency.
+This project is a data platform solution for my previous contribution with my partners at **COMNETSAT** called *A Practical Real-time Flight Delay Prediction System using Big Data Technology*<sup>[[1]](#references)</sup>. With a bounded resources and research purpose only, the following architecture is a first look to the problem so I only utilize very common technologies (most of them are open-source) to develop the platform, including Apache Kafka, Apache Cassandra, Apache Spark, Apache Airflow, Google Bigquery and Metabase. However, the platform still operate well with about 225.000 (rows/batch) batch ingestion throughput or approximately 10.000 (rows/s) streaming ingestion throughput with an acceptable overall latency.
 
 ## Introduction
 
@@ -29,7 +29,7 @@ On the source side, I implement a relational database, MySQL, and a document-bas
 
 ## Results
 
-The platform is able to batch ingest (350.000) rows/batch with a permissible delay or stream ingest around 10.000 (rows/s), then processes and persists data into the Data Warehouse. Also, it offers Data Analysts a friendly interface to analyze quality data, build reports and schedule to send them to the airlines. In this case, I also take responsible for this work, the 2 following dashboards are examples, one is the *All Airlines Report* for the **BTS** manager and another is the *9E Airline Report* for the **9E airline**:
+The platform is able to batch ingest 225.000 (rows/batch) with a permissible delay or stream ingest around 10.000 (rows/s), in fact, it depends on your data size intead of number of rows. Additionally, it offers Data Analysts a friendly interface to analyze quality data, build reports and schedule to send them to the airlines. In this case, I also take responsible for this work, the 2 following dashboards are examples, one is the *All Airlines Report* for the **BTS** manager and another is the *9E Airline Report* for the **9E airline**:
 <ul>
   <li>
     <a href="https://www.youtube.com/embed/PNkLthUdQus?autoplay=1&loop=1&playlist=PNkLthUdQus">All airlines - Flight delay report</a>

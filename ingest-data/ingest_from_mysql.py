@@ -1,7 +1,6 @@
 # import libraries
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
-import time
 
 # create spark session
 spark = SparkSession \
@@ -30,9 +29,6 @@ data = spark.read \
     .option("numPartitions", 2) \
     .load()
 
-# get the starting time
-start = time.time()
-
 # read and write by quarter
 for i in range(2020,2022):
     for j in range(1,13):
@@ -49,15 +45,6 @@ for i in range(2020,2022):
             .options(keyspace="flight_delay", table="mysql") \
             .mode("append") \
             .save()
-        
-        # alert
-        print("Finished writing data of " + str(month) + "/" + str(year) + ".")
-
-# get the ending time
-end = time.time()
-
-# show the consumed time
-print("Consume: " + str(end-start) + "s.")
 
 # stop session
 spark.stop()

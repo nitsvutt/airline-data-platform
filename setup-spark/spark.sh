@@ -35,4 +35,4 @@ export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
 """
 
 # add packages to connect to databases
-pyspark --packages mysql:mysql-connector-java:8.0.30,org.mongodb.spark:mongo-spark-connector_2.11:2.4.0,com.datastax.spark:spark-cassandra-connector_2.12:3.3.0,com.google.cloud.spark:spark-bigquery-with-dependencies_2.12:0.31.1
+pyspark --packages mysql:mysql-connector-java:8.0.30,org.mongodb.spark:mongo-spark-connector_2.12:10.1.1,com.datastax.spark:spark-cassandra-connector_2.12:3.3.0,com.google.cloud.spark:spark-bigquery-with-dependencies_2.12:0.31.1

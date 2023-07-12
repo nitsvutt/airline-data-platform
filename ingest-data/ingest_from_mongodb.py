@@ -7,7 +7,7 @@ import time
 spark = SparkSession \
         .builder \
         .master("local[*]") \
-        .appName("IngestFromMySQL") \
+        .appName("IngestFromMongoDB") \
         .config("spark.executor.memory", "2g") \
         .config("spark.executor.cores", '2') \
         .config("spark.driver.memory", '2g') \
@@ -21,14 +21,12 @@ spark = SparkSession \
 
 # read new data to dataframe
 data = spark.read \
-    .format("jdbc") \
-    .option("driver","com.mysql.cj.jdbc.Driver") \
-    .option("url", "jdbc:mysql://localhost:3306/flight_delay") \
-    .option("dbtable", "flight_records") \
-    .option("user", "root") \
-    .option("password", "admin") \
-    .option("numPartitions", 2) \
-    .load()
+        .format("mongodb") \
+        .option("connection.uri", "mongodb://root:admin@localhost:2717,localhost:2727,localhost:2737/?replicaSet=myReplicaSet") \
+        .options(database="flight_delay") \
+        .options(collection="flight_records") \
+        .option("numPartitions", 2) \
+        .load().drop("_id")
 
 # get the starting time
 start = time.time()
@@ -46,7 +44,7 @@ for i in range(2020,2022):
         # write data to cassandra
         df.write \
             .format("org.apache.spark.sql.cassandra") \
-            .options(keyspace="flight_delay", table="mysql") \
+            .options(keyspace="flight_delay", table="mongodb") \
             .mode("append") \
             .save()
         

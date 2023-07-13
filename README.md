@@ -14,7 +14,7 @@ In recent years, **The Bureau of Transportation Statistics (BTS)** under **The U
 
 ## Dataset
 
-This dataset was extracted from *The Reporting Carrier On-Time Performance (1987-present)* table of *The On-Time Database* collected by **BTS**. It contains 109 columns and more than 5M records per year. With a limited resource (1 machine with an Apple Silicon chip 8-core CPU and 8GB RAM), I only practice with 61 columns concentrating on flight delay of the year 2020. The metadata are available [here](https://github.com/nitsvutt/airline-data-platform/blob/main/extracted-data/metadata/metadata.html).
+This dataset was extracted from *The Reporting Carrier On-Time Performance (1987-present)* table of *The On-Time Database* collected by **BTS**. It contains 109 columns and more than 5M records per year. With a limited resource (1 machine with an Apple Silicon chip 8-core CPU and 8GB RAM), I only practice with 61 columns, concentrating on flight delay, of the year 2020 and 2021. The metadata are available [here](https://github.com/nitsvutt/airline-data-platform/blob/main/extracted-data/metadata/metadata.html).
 
 ## Methodology
 

@@ -26,8 +26,7 @@ data = spark.read \
     .option("dbtable", "flight_records") \
     .option("user", "root") \
     .option("password", "admin") \
-    .option("numPartitions", 2) \
-    .load()
+    .load().coalesce(3)
 
 # read and write by quarter
 for i in range(2020,2022):

@@ -24,8 +24,7 @@ data = spark.read \
         .option("connection.uri", "mongodb://root:admin@localhost:2717,localhost:2727,localhost:2737/?replicaSet=myReplicaSet") \
         .options(database="flight_delay") \
         .options(collection="flight_records") \
-        .option("numPartitions", 2) \
-        .load().drop("_id")
+        .load().drop("_id").coalesce(3)
 
 # read and write by quarter
 for i in range(2020,2022):
